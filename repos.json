@@ -8,16 +8,18 @@
     },
     "withKernelSU": true,
     "toolchains": [
-      {
-        "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
-        "branch": "master",
-        "name": "gas"
-      },
-      {
-        "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86",
-        "branch": "clang-r450784",
-        "name": "clang"
-      }
+      "toolchains": [
+          {
+            "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
+            "branch": "master",
+            "name": "gas"
+          },
+          {
+            "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86",
+            "branch": "clang-r487747c",
+            "name": "clang"
+          }
+        ]
     ],
     "params": {
       "ARCH": "arm64",
