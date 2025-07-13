@@ -38,7 +38,7 @@
     "toolchains": [
       {
         "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
-        "branch": "master-kernel-build-2022",
+        "branch": "master",
         "name": "gas"
       },
       {
