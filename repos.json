@@ -8,27 +8,55 @@
     },
     "withKernelSU": true,
     "toolchains": [
-      "toolchains": [
-          {
-            "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
-            "branch": "master",
-            "name": "gas"
-          },
-          {
-            "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86",
-            "branch": "clang-r487747c",
-            "name": "clang"
-          }
-        ]
+      {
+        "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
+        "branch": "master",
+        "name": "gas"
+      },
+      {
+        "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86",
+        "branch": "clang-r487747c",
+        "name": "clang"
+      }
     ],
     "params": {
       "ARCH": "arm64",
-      "CROSS_COMPILE": "aarch64-linux-android-",
-      "CROSS_COMPILE_ARM32": "arm-linux-androideabi-",
-      "CROSS_COMPILE_COMPAT": "arm-linux-androideabi-",
-      "CLANG_TRIPLE": "aarch64-linux-android-",
-      "CC": "clang",
-      "LLVM_IAS": "0"
+      "CROSS_COMPILE": "aarch64-linux-gnu-",
+      "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
+      "CROSS_COMPILE_COMPAT": "arm-linux-gnueabi-",
+      "CLANG_TRIPLE": "aarch64-linux-gnu-",
+      "AR": "",
+      "CC": "clang"
+    }
+  },
+  {
+    "kernelSource": {
+      "name": "shlwyl-KernelSU",
+      "repo": "https://github.com/Rinko-Studio/android_kernel_xiaomi_thyme",
+      "branch": "thirteen",
+      "device": "thyme"
+    },
+    "withKernelSU": true,
+    "toolchains": [
+      {
+        "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
+        "branch": "master",
+        "name": "gas"
+      },
+      {
+        "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86",
+        "branch": "clang-r487747c",
+        "name": "clang"
+      }
+    ],
+    "params": {
+      "ARCH": "arm64",
+      "CROSS_COMPILE": "aarch64-linux-gnu-",
+      "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
+      "CROSS_COMPILE_COMPAT": "arm-linux-gnueabi-",
+      "CLANG_TRIPLE": "aarch64-linux-gnu-",
+      "AR": "",
+      "CC": "clang"
     }
   }
 ]
