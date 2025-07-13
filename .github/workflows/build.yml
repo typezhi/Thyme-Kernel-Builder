@@ -10,7 +10,9 @@ on:
 jobs:
   Set-repos:
     name: "🐂 Parse repos.json"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
+    container:
+      image: python:2.7  # 使用 Docker 镜像，官方支持
     outputs:
       repos: ${{ steps.generate-matrix.outputs.repos }}
     steps:
@@ -23,10 +25,10 @@ jobs:
           echo "repos<<EOF" >> $GITHUB_OUTPUT
           cat  ${{ env.CONFIGURATION }} >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
-      - name: "Install Python 2.7"
-        uses: actions/setup-python@v5
-        with:
-          python-version: '2.7'
+      # - name: "Install Python 2.7"
+      #   uses: actions/setup-python@v5
+      #   with:
+      #     python-version: '2.7'
 
 
   Build-Kernel:
